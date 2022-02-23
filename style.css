@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300&display=swap");
+
+* {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+p {
+    padding: 10px;
+}
+
+body {
+    height: 100%;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+#footerText {
+    text-align: center;
+    padding: 3rem;
+
+    font-size: 20px;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+a:link {
+    color: #eb6159;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #f5635b;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e65047;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: #eb6159;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* Grid Format */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 0.5fr;
+
+    grid-template-areas:
+        "navBar title title title title"
+        "navBar mainContent mainContent mainContent mainContent"
+        "navBar mainContent mainContent mainContent mainContent"
+        "footer footer footer footer footer";
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr 0.5fr;
+    
+        grid-template-areas:
+            "title"
+            "navBar"
+            "mainContent"
+            "mainContent"
+            "footer";
+    }
+}
+
+.navBar {
+    grid-area: navBar;
+    background-color: rgb(37, 36, 36);
+
+    border-right: solid 1px rgb(22, 22, 22);
+}
+
+.title {
+    grid-area: title;
+    padding-top: 40px;
+    font-family: "Architects Daughter", cursive;
+    font-size: 35px;
+}
+
+.mainContent {
+    grid-area: mainContent;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
