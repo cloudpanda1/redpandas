@@ -1,7 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;700&display=swap');
 
 * {
     margin: 0;
+}
+
+button {
+    background-color: lightskyblue;
+    padding: 15px;
+    margin: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4aaae6;
+}
+
+.paraHeader {
+    font-weight: bold;
+    color: #b6352e;
 }
 
 h1 {
